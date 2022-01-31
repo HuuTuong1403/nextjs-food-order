@@ -57,11 +57,23 @@
 
 .listItem {
   margin: 20px;
-  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.listItemImg {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.listItem:hover,
+.listItemImg:hover {
+  filter: brightness(0.9);
 }
 
 .cart {
   position: relative;
+  cursor: pointer;
 }
 
 .counter {

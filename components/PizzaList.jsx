@@ -1,7 +1,7 @@
 import { PizzaCard } from "@/components/index";
-import styles from "../styles/PizzaList.module.css";
+import styles from "@/styles/PizzaList.module.css";
 
-export function PizzaList() {
+export function PizzaList({ pizzaList }) {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>THE BEST PIZZA IN TOWN</h1>
@@ -11,8 +11,8 @@ export function PizzaList() {
         sit amet, consectetur adipiscing elit.
       </p>
       <div className={styles.wrapper}>
-        {Array.from({ length: 8 }).map((item, i) => (
-          <PizzaCard key={i} />
+        {pizzaList.map((pizza) => (
+          <PizzaCard key={pizza._id} pizza={pizza} />
         ))}
       </div>
     </div>
